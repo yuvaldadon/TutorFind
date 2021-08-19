@@ -7,6 +7,7 @@ class User < ApplicationRecord
   belongs_to :plan
   
   attr_accessor :stripe_card_token
+  # Create Stripe customer for premium membership
   def save_with_subscription
     if valid?
       customer = Stripe::Customer.create(description: email, plan: 'price_1JPrqKBSIZw7Us2gk2jlkZOu', card: stripe_card_token)

@@ -1,4 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+    
+    #Connect costumer to Stripe for premium membership creation
     def create
         super do |resource|
             if params[:plan]
