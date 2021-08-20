@@ -51,6 +51,8 @@ gem 'figaro', '1.1.1'
 #gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 #gem 'mimemagic', '~> 0.3.0'
 gem 'paperclip'
+#gem 'aws-sdk'
+gem 'aws-sdk-s3'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
