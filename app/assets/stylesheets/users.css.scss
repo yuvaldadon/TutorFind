@@ -1,8 +1,19 @@
+// profile image
 .avatar-show-img {
     width: 176px;
     height: 176px;
+    margin: 30px;
 }
 
+// profile edit button
+.col-md-3 .profile-edit-btn {
+    margin: auto;
+    width: 70%;
+    //background-color: black;
+    
+}
+
+//profile description
 .job-title-icon {
     display: inline-block;
     width: 30px;

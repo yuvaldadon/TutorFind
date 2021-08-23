@@ -22,8 +22,8 @@
             <span class="icon-bar"></span>
           </button>
           <%= link_to root_path, class: "navbar-brand" do %>
-            <i class="fa fa-bolt"></i>
-            Match
+            <i class="fa fa-book"></i>
+            TutorFind
           <% end %>
         </div>
         
@@ -40,8 +40,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <% if user_signed_in? %>
                     <li><%= link_to "My Profile", user_path(id: current_user.id) %></li>
-                    <li><%= link_to "Community", users_path %></li>
+                    <!--<li><%= link_to "Community", users_path %></li>-->
                 <% end %>
+                <li><%= link_to "Community", users_path %></li>
                 <li><%= link_to "About",about_path %></li>
                 <li><%= link_to "Contact Us", new_contact_path %></li>
             </ul>
@@ -58,5 +59,13 @@
     <!--<%= debug('current_user.id': current_user.id) if Rails.env.development? if user_signed_in? %>-->
     <!--<%= debug(current_user.inspect) if Rails.env.development? if user_signed_in? %>-->
     <%= yield %>
+    
+    <nav class="navbar fixed-bottom navbar-light bg-light" id="footer">
+          <%= link_to root_path, class: "navbar-brand" do %>
+          <i class="fa fa-book footer-logo"></i>
+            TutorFind
+          <% end %>
+    </nav>
+    
   </body>
 </html>

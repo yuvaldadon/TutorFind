@@ -35,6 +35,14 @@ h1, h2, h3 {
 // Navigation bar Style
 .navbar {
     border: none;
+    font-size: 15px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 24px;
 }
 
 .navbar-brand {
@@ -63,27 +71,106 @@ h1, h2, h3 {
     }
 }
 
-// Home page style
-.home-callout {
-    margin-top: -20px;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    color: white;
+// Background image bottom of page
+body, html {
+  height: 100%;
+  margin: 0;
 }
 
+.bg {
+  /* The image used */
+  background-image: url("https://imgur.com/ear9KJv.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Home page navbar layout
+.home-callout {
+    margin-top: -8px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    background: lightcoral;
+}
+
+// center headline text
+.home-headline {
+    background: rgba(255, 255 ,255, 30%);
+    padding: 15px;
+    margin-left: 20%;
+    width: 60%;
+    margin-top: 1px;
+    margin-bottom: 15px;
+    padding-top: 27px;
+    padding-bottom: 34px;
+}
+.home-headline .h1 {
+    text-size: 46px;
+}
+
+// Home Page buttons
+.home-signup-links .well {
+    border-radius: 37px;
+    background-color: #7d404073;
+}
+
+.home-signup-links {
+    margin-top: 30px;
+}
+
+// Flash alert messages
 .flash-container {
   position: absolute;
   width: 100%;
+  margin: auto;
+  display: inline-block;
 }
 .alert-notice, .alert-alert {
   text-align: center;
-  background: rgba(255, 255, 255, 0.3);
+  //background: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
   margin-top: -14px;
   color: black;
+  background: rgba(255, 255, 255, 86%);
 }
 
-// Home sign up buttons
-.home-signup-links {
-    margin-top: 30px;
+.flash-container .alert {
+    margin: auto;
+}
+
+// Home carousel
+// .carousel-inner img {
+//     width: 100%;
+// }
+
+// .carousel-align-center {
+//     width: fit-content;
+//     margin: auto;
+// }
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0;
+    width: 100%;
+    max-height: 100px;
+    padding: 0;
+    height: 30px;
+    min-height: 0;
+}
+
+#footer .navbar-brand {
+    padding: 0px;
+    color: white;
+}
+.footer-logo {
+    color: white;
+    font-size: 17px;
+    padding: 5px;
 }
