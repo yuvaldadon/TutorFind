@@ -1,6 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
     before_action :select_plan, only: :new
-    #Connect costumer to Stripe for premium membership creation
+    
+    # Save costuomer based on basic or subscription
     def create
         super do |resource|
             if params[:plan]
@@ -18,6 +19,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
     
     private
+        # Enforce choosing membership type from home page
         def select_plan
             unless (params[:plan] == '1' || params[:plan] == '2')
               flash[:notice] = "Please select a membership plan to sign up."

@@ -1,21 +1,24 @@
-<div class='home-callout text-center container-fluid'>
-<!--    <h1>Welcome to Match</h1>-->
-<!--    <h3>A membership site</h3>-->
-<!--</div>-->
+<!--Home Page Body-->
 
-    <!--Home Headline-->
+<!--Headline-->
+<div class='home-callout text-center container-fluid'>
     <div class="row">
         <div class='col-md-8 col-md-offset-2 home-headline'>
             <h1>Welcome to TutorFind</h1>
             <h3>Find a Tutor that suits you</h3>
         </div>
     </div>
-</div>    
+</div> 
+
+
+<!--Main Button container-->
 <div class="container home-signup-links">
     <div class="row">
-        
-        
+
+        <!--Display navigation buttons if user logged in-->
         <% if user_signed_in? %>
+        
+            <!--Left Profile Button-->
             <div class="col-md-6">
                 <div class="well">
                     <h2 class="text-center">Your Profile</h2>
@@ -30,6 +33,7 @@
                 </div>
             </div>
             
+            <!--Right community button-->
             <div class="col-md-6">
                 <div class="well">
                     <h2 class="text-center">The Community</h2>
@@ -37,7 +41,11 @@
                     <%= link_to "Visit the Community", users_path, class:'btn btn-primary btn-lg btn-block' %>
                 </div>
             </div>
+            
+        <!--Display membership types if not logged in-->
         <% else %>
+        
+            <!--Left Basic membership Button-->
             <div class="col-md-6">
                 <div class="well">
                     <h2 class="text-center">Basic Membership</h2>
@@ -47,6 +55,7 @@
                 </div>
             </div>
             
+            <!--Right Premium membership Button-->
             <div class="col-md-6">
                 <div class="well">
                     <h2 class="text-center">Premium Membership</h2>
@@ -60,8 +69,9 @@
         <% end %>
     </div>
     
+    <!--What We Offer Section-->
     <div class="container-fluid text-center offer-section">
-      <h2>What We Offer</h2>
+      <h2>How Does It Work ?</h2>
       <br>
       <div class="row">
         <div class="col-sm-4">
@@ -78,4 +88,5 @@
         </div>
       </div>
     </div>
+    
 </div>

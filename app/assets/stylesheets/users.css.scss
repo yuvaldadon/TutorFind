@@ -1,4 +1,4 @@
-// profile image
+// Profile image
 .avatar-show-img {
     width: 176px;
     height: 176px;
@@ -6,7 +6,7 @@
     border-radius: 70%;
 }
 
-// profile edit button
+// Profile edit button
 .col-md-3 .profile-edit-btn {
     margin: auto;
     width: 70%;
@@ -14,17 +14,16 @@
     
 }
 
-//profile description
+// Profile description page
 .job-title-icon {
     display: inline-block;
     width: 25px;
     height: 25px;
-    border: 2px solid #2e6da4;
+    //border: 2px solid #2e6da4;
     border-radius: 4px;
-    background-color: #337ab7;
-    color: white;
+    //background-color: #337ab7;
+    color: black;
     text-align: center;
-    
 }
 
 .profile-block {
@@ -35,8 +34,7 @@
 }
 
 .well.profile-description {
-    background-color: #5cb85c;
-    border-color: #4cae4c;
+    background-color: #f94a28e0;
 }
 
 .well.profile-contact-info {
@@ -44,23 +42,35 @@
     border-color: #46b8da;
 }
 
-//users index page
+// Users index page
 .user-index-avatar {
     width: 128px;
     height: 128px;
     border-radius: 50%;
 }
 
+// Diff background color for index page
 .well.white-bg {
     background-color: white;
 }
 
-// about page
+.well.orange-bg {
+    background-color: #ffcccc8a;
+}
+.well.index-page-well {
+    margin: 3%;;
+}
+
+.users-index-container {
+    margin-top: 20px;
+}
+
+// About page
 .about-page .well {
     margin-top: 20px;
 }
 
-//log in page
+// Log in page
 .log-in .well {
     margin-top: 20px;
 }

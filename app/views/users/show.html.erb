@@ -1,5 +1,8 @@
+<!--User Profile Body-->
 <div class='container'>
   <div class="row">
+    
+    <!--Profile Avatar-->
     <div class="col-md-3 text-center">
       <%= image_tag @user.profile.avatar.url, class: 'avatar-show-img' %><br/>
       <% if user_signed_in? %>
@@ -9,79 +12,24 @@
         <% end %>
     </div>
     
+    <!--Profile Attributes-->
     <div class="col-md-6">
+      <!--Name-->
       <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
-      <h3><span class="job-title-icon"><%= job_title_icon %></span><%= @user.profile.job_title %></h3>
+      <!--Job title-->
+      <h4><span class="job-title-icon"><%= job_title_icon %></span><%= " " + @user.profile.job_title %></h4>
+      <!--description-->
       <div class="well profile-block profile-description">
         <h3>Description</h3>
         <h5><%= @user.profile.description %></h5>
       </div>
+      <!--contact-info-->
       <div class="well profile-block profile-contact-info">
         <h3>Contact Information</h3>
         <h5><%= @user.profile.phone_number %></h5>
         <h5><%= @user.profile.contact_email %></h5>
       </div>
     </div>
+    
   </div>
-  
-  <!--<div class="container">-->
-  <!--  <h2>Nested Media Objects</h2>-->
-  <!--  <p>Media objects can also be nested (a media object inside a media object):</p><br>-->
-  <!--  <div class="media">-->
-  <!--    <div class="media-left">-->
-  <!--      <img src="img_avatar1.png" class="media-object" style="width:45px">-->
-  <!--    </div>-->
-  <!--    <div class="media-body">-->
-  <!--      <h4 class="media-heading">John Doe <small><i>Posted on February 19, 2016</i></small></h4>-->
-  <!--      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-        
-        <!-- Nested media object -->
-  <!--      <div class="media">-->
-  <!--        <div class="media-left">-->
-  <!--          <img src="img_avatar2.png" class="media-object" style="width:45px">-->
-  <!--        </div>-->
-  <!--        <div class="media-body">-->
-  <!--          <h4 class="media-heading">John Doe <small><i>Posted on February 20, 2016</i></small></h4>-->
-  <!--          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-  
-            <!-- Nested media object -->
-  <!--          <div class="media">-->
-  <!--            <div class="media-left">-->
-  <!--              <img src="img_avatar3.png" class="media-object" style="width:45px">-->
-  <!--            </div>-->
-  <!--            <div class="media-body">-->
-  <!--              <h4 class="media-heading">John Doe <small><i>Posted on February 21, 2016</i></small></h4>-->
-  <!--              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-  <!--            </div>-->
-  <!--          </div>-->
-            
-  <!--        </div>-->
-          
-          <!-- Nested media object -->
-  <!--        <div class="media">-->
-  <!--          <div class="media-left">-->
-  <!--            <img src="img_avatar4.png" class="media-object" style="width:45px">-->
-  <!--          </div>-->
-  <!--          <div class="media-body">-->
-  <!--            <h4 class="media-heading">Jane Doe <small><i>Posted on February 20, 2016</i></small></h4>-->
-  <!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-  <!--          </div>-->
-  <!--        </div>-->
-          
-  <!--      </div>-->
-  <!--    </div>-->
-      
-      <!-- Nested media object -->    
-  <!--    <div class="media">-->
-  <!--      <div class="media-left">-->
-  <!--        <img src="img_avatar5.png" class="media-object" style="width:45px">-->
-  <!--      </div>-->
-  <!--      <div class="media-body">-->
-  <!--        <h4 class="media-heading">Jane Doe <small><i>Posted on February 19, 2016</i></small></h4>-->
-  <!--        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  
-  <!--  </div>-->
-  <!--</div>-->
 </div>

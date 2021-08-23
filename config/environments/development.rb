@@ -55,9 +55,9 @@ Rails.application.configure do
   #config.paperclip_defaults = {
   #storage: :s3,
   #s3_credentials: {
-  #  bucket: 'webdev77',
-  #  access_key_id: 'AKIATPPUYVAXRZSCVPFZ',
-  #  secret_access_key: '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',
+  #  bucket: '',
+  #  access_key_id: '',
+  #  secret_access_key: '',
   #  s3_region: 'eu-central-1',
   #  }
   #}

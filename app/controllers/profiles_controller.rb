@@ -1,17 +1,18 @@
 class ProfilesController < ApplicationController
     before_action :authenticate_user!
+    # Check current user can edit profile
     before_action :only_current_user
-    # GET to /users/:user_id/profile/new
     
+    # GET /users/:user_id/profile/new
     def new
         @profile = Profile.new
     end
     
-    # POST
+    # POST /users/:user_id/profile/new
     def create
         @user = User.find(params[:user_id])
         @profile = @user.build_profile(profile_params)
-        
+        # Save profile
         if @profile.save
             flash[:success] = "Profile Added"
             redirect_to user_path( params[:user_id] )
@@ -30,6 +31,7 @@ class ProfilesController < ApplicationController
     def update
         @user = User.find(params[:user_id])
         @profile = @user.profile
+        # Attempt update
         if @profile.update(profile_params)
             flash[:success] = "Profile Updated"
             redirect_to user_path( params[:user_id] )

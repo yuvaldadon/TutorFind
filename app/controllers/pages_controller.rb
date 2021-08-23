@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
-    # Get request home
+    # GET root
     def home
         @basic_plan = Plan.find(1)
         @pro_plan = Plan.find(2)
     end
     
-    # Get request /about
+    # GET /about
     def about
     end
 end

@@ -1,31 +1,97 @@
-<div class='container'>
+<!--User List body-->
+<div class='container users-index-container'>
     <div class="row">
-        <div class="col-md-6 col-md-offset-5">
+        
+        <!--Students List-->
+        <div class="col-md-6">
+            <ul class="list-unstyled">
+                <!--Loop over students-->
+                <% @users.each do |user| %>
+                    <% if user.profile %>
+                        <% if user.profile.job_title=="Student" %>
+                            <li>
+                                <!--background color if premium-->
+                                <% if user.plan_id == 2 %>
+                                    <div class="index-page-well well row orange-bg">
+                                <% else %>
+                                    <div class="index-page-well well row white-bg">
+                                <% end %>
+                                    <!--avatar-->
+                                    <div class="col-sm-4 text-center">
+                                        <% if user.profile.avatar %>
+                                            <%= link_to user do %>
+                                                <%= image_tag user.profile.avatar.url, class: 'user-index-avatar' %>
+                                            <% end %>
+                                        <% end %>
+                                    </div>
+                                    <!--Profile attributes-->
+                                    <div>
+                                        <!--name-->
+                                        <%= link_to user do %>
+                                            <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
+                                        <% end %>
+                                        <!--job title-->
+                                        <i class='fa fa-graduation-cap'></i>
+                                        <%= user.profile.job_title %>
+                                        <!--premium tag-->
+                                        <p>
+                                            <% if user.plan_id == 2 %>
+                                                <span class="label label-danger">Premium</span>
+                                            <% end %>
+                                        </p>
+                                        <!--description-->
+                                        <%= user.profile.description.first(40) %>
+                                    </div>
+                                </div>
+                            </li>
+                        <% end %>
+                    <% end %>
+                <% end %>
+            </ul>
+        </div>
+        
+        <!--Tutors List-->
+        <div class="col-md-6">
             <ul class="list-unstyled">
                 <% @users.each do |user| %>
                     <% if user.profile %>
-                        <li>
-                            <div class="well row <%= cycle('white-bg', '') %>">
-                                <div class="col-sm-4 text-center">
-                                    <% if user.profile.avatar %>
+                        <% if user.profile.job_title=="Tutor" %>
+                            <li>
+                                <!--background color if premium-->
+                                <% if user.plan_id == 2 %>
+                                    <div class="index-page-well well row orange-bg">
+                                <% else %>
+                                    <div class="index-page-well well row white-bg">
+                                <% end %>
+                                    <!--avatar-->
+                                    <div class="col-sm-4 text-center">
+                                        <% if user.profile.avatar %>
+                                            <%= link_to user do %>
+                                                <%= image_tag user.profile.avatar.url, class: 'user-index-avatar' %>
+                                            <% end %>
+                                        <% end %>
+                                    </div>
+                                    <!--Profile attributes-->
+                                    <div>
+                                        <!--name-->
                                         <%= link_to user do %>
-                                            <%= image_tag user.profile.avatar.url, class: 'user-index-avatar' %>
+                                            <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
                                         <% end %>
-                                    <% end %>
-                                </div>
-                                <div>
-                                    <%= link_to user do %>
-                                        <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
-                                    <% end %>
-                                    <p>
+                                        <!--job title-->
+                                        <i class='fa fa-user'></i>
                                         <%= user.profile.job_title %>
-                                        <% if user.plan_id == 2 %>
-                                            <span class="label label-danger">Premium</span>
-                                        <% end %>
-                                    </p>
+                                        <!--premium tag-->
+                                        <p>
+                                            <% if user.plan_id == 2 %>
+                                                <span class="label label-danger">Premium</span>
+                                            <% end %>
+                                        </p>
+                                        <!--description-->
+                                        <%= user.profile.description.first(40) %>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
+                        <% end %>
                     <% end %>
                 <% end %>
             </ul>
