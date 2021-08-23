@@ -9,10 +9,10 @@ class ContactsController < ApplicationController
             flash[:danger] = "Email is not valid"
             redirect_to new_contact_path
         elsif @contact.save
-            name = params[:contact][:name]
-            email = params[:contact][:email]
-            body = params[:contact][:comments]
-            ContactMailer.contact_email(name, email, body).deliver
+            #name = params[:contact][:name]
+            #email = params[:contact][:email]
+            #body = params[:contact][:comments]
+            #ContactMailer.contact_email(name, email, body).deliver
             flash[:info] = "Message Sent"
             redirect_to root_path
         else

@@ -3,6 +3,7 @@
     width: 176px;
     height: 176px;
     margin: 30px;
+    border-radius: 70%;
 }
 
 // profile edit button
@@ -16,8 +17,8 @@
 //profile description
 .job-title-icon {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border: 2px solid #2e6da4;
     border-radius: 4px;
     background-color: #337ab7;
@@ -52,4 +53,14 @@
 
 .well.white-bg {
     background-color: white;
+}
+
+// about page
+.about-page .well {
+    margin-top: 20px;
+}
+
+//log in page
+.log-in .well {
+    margin-top: 20px;
 }

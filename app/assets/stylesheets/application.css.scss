@@ -36,13 +36,13 @@ h1, h2, h3 {
 .navbar {
     border: none;
     font-size: 15px;
-    padding-bottom: 8px;
-    padding-top: 8px;
+    //padding-bottom: 8px;
+    //padding-top: 8px;
     margin-bottom: 8px;
 }
 
 .title {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .navbar-brand {
@@ -96,7 +96,7 @@ body, html {
     padding-top: 30px;
     padding-bottom: 30px;
     color: white;
-    background: lightcoral;
+    //background: lightcoral;
 }
 
 // center headline text
@@ -117,11 +117,15 @@ body, html {
 // Home Page buttons
 .home-signup-links .well {
     border-radius: 37px;
-    background-color: #7d404073;
+    background-color: #e6e4e382;
 }
-
+.home-signup-links .btn {
+    width: 70%;
+    margin: auto;
+}
 .home-signup-links {
     margin-top: 30px;
+    color: black;
 }
 
 // Flash alert messages
@@ -142,6 +146,7 @@ body, html {
 
 .flash-container .alert {
     margin: auto;
+    width: 20%;   
 }
 
 // Home carousel
@@ -174,3 +179,28 @@ body, html {
     font-size: 17px;
     padding: 5px;
 }
+
+.img-home {
+    width: 25%;
+    margin: auto;
+}
+
+.home-signup-links .btn-home-bottom {
+    margin-top: 5%;
+    width: 34%;
+}
+
+// What We Offer section
+
+.offer-section {
+    margin-top: 50px;
+}
+
+.logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
